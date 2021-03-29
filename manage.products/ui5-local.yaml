@@ -1,0 +1,32 @@
+specVersion: '2.0'
+metadata:
+  name: 'manage.products'
+type: application
+framework:
+  name: SAPUI5
+  version: '1.88.0'
+  libraries: 
+    - name: sap.m
+    - name: sap.ushell
+    - name: sap.ui.core
+    - name: sap.f
+    - name: sap.ui.comp
+    - name: sap.ui.table
+    - name: sap.suite.ui.generic.template
+    - name: sap.ui.generic.app
+    - name: themelib_sap_fiori_3
+server:
+  customMiddleware:
+  - name: fiori-tools-proxy
+    afterMiddleware: compression
+    configuration:
+      backend:
+      - path: /sap
+        url: https://36eb0fd9-d2e8-407e-9afa-551459baa1d4.abap.eu10.hana.ondemand.com
+        scp: true
+        destination: abap-cloud-default_abap-trial
+  - name: fiori-tools-appreload
+    afterMiddleware: compression
+    configuration:
+     port: 35729
+     path: webapp
