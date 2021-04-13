@@ -16,6 +16,10 @@ modules:
       - productsnamespacemanageproducts.zip
       name: productsnamespacemanageproducts
       target-path: resources/
+    - artifacts:
+      - productsnamespacereportovpmarketord.zip
+      name: productsnamespacereportovpmarketord
+      target-path: resources/
 - name: productsnamespacemanageproducts
   type: html5
   path: manage.products
@@ -56,6 +60,16 @@ modules:
         existing_destinations_policy: ignore
   build-parameters:
     no-source: true
+- name: productsnamespacereportovpmarketord
+  type: html5
+  path: report.ovpmarketord
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
 resources:
 - name: zpip_products_git-html5-repo-host
   type: org.cloudfoundry.managed-service
@@ -68,6 +82,15 @@ resources:
   parameters:
     config:
       HTML5Runtime_enabled: true
+      init_data:
+        instance:
+          destinations:
+          - Authentication: NoAuthentication
+            Name: ui5
+            ProxyType: Internet
+            Type: HTTP
+            URL: https://ui5.sap.com
+          existing_destinations_policy: update
       version: 1.0.0
     service: destination
     service-name: zpip_products_git-destination-service
