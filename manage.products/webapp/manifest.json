@@ -1,5 +1,5 @@
 {
-    "_version": "",
+    "_version": "1.31.0",
     "sap.app": {
         "id": "productsnamespace.manage.products",
         "type": "application",
