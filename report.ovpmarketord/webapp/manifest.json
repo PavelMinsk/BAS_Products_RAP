@@ -158,7 +158,7 @@
                 "model": "mainService",
                 "template": "sap.ovp.cards.charts.analytical",
                 "settings": {
-                    "title": "by Countries",
+                    "title": "Average Gross Income",
                     "subtTitle": "",
                     "entitySet": "OVPCards",
                     "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
