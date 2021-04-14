@@ -56,7 +56,7 @@
                     "action": "report",
                     "title": "{{AppTitle}}",
                     "subTitle": "",
-                    "icon": "sap-icon://filter-analytics"    
+                    "icon": "sap-icon://filter-analytics"
                 }
             }
         }
@@ -165,6 +165,42 @@
                     "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#dpAVGIncomeCountry",
                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#pvAVGIncomeCountry",
                     "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#AVGIncomeCountry"
+                }
+            },
+            "OrdersList": {
+                "model": "mainService",
+                "template": "sap.ovp.cards.list",
+                "settings": {
+                    "title": "{{Profitable of Orders}}",
+                    "subTitle": "{{ }}",
+                    "entitySet": "OVPCards",
+                    "listType": "extended",
+                    "listFlavor": "bar",
+                    "addODataSelect": false,
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#dpAVGIncomeCountryList",
+                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#pvOrdersList",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#OrdersList",
+                    "defaultSpan": {
+                        "rows": 7,
+                        "cols": 1
+                    }
+                }
+            },
+            "ListCard2": {
+                "model": "mainService",
+                "template": "sap.ovp.cards.list",
+                "settings": {
+                    "title": "Profitable of Orders",
+                    "entitySet": "OVPCards",
+                    "listFlavor": "bar",
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#dpAVGIncomeCountry",
+                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#pvOrdersList",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#OrdersList",
+                    "defaultSpan": {
+                        "rows": 7,
+                        "cols": 1
+                    }
                 }
             }
         }
