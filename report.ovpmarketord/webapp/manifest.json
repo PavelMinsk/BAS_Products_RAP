@@ -153,6 +153,19 @@
                         }
                     ]
                 }
+            },
+            "AVGIncomeCountry": {
+                "model": "mainService",
+                "template": "sap.ovp.cards.charts.analytical",
+                "settings": {
+                    "title": "by Countries",
+                    "subtTitle": "",
+                    "entitySet": "OVPCards",
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#dpAVGIncomeCountry",
+                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#pvAVGIncomeCountry",
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#AVGIncomeCountry"
+                }
             }
         }
     },
