@@ -56,7 +56,7 @@
                     "action": "report",
                     "title": "{{AppTitle}}",
                     "subTitle": "",
-                    "icon": "https://icons.iconarchive.com/icons/codicode/smiley/128/hug-icon.png"
+                    "icon": "https://icons.iconarchive.com/icons/rokey/popo-emotions/128/confident-icon.png"
                 }
             }
         }
@@ -217,7 +217,7 @@
                     "objectStreamCardsSettings":{
                         "annotationPath": "com.sap.vocabularies.UI.v1.Facets#StackOrdersList"
                     },
-                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#Header,com.sap.vocabularies.UI.v1.Identification#Footer"
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#FaceSide,com.sap.vocabularies.UI.v1.Identification#FlipSide"
                 }
             }
         }
