@@ -217,7 +217,7 @@
                     "objectStreamCardsSettings":{
                         "annotationPath": "com.sap.vocabularies.UI.v1.Facets#StackOrdersList"
                     },
-                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#Header,com.sap.vocabularies.UI.v1.Identification#Footer"
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#Blanck,com.sap.vocabularies.UI.v1.Identification#Footer"
                 }
             }
         }
