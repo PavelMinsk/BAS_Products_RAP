@@ -192,15 +192,32 @@
                 "settings": {
                     "title": "Profitable of Orders",
                     "entitySet": "OVPCards",
+                    "listType": "condensed",
                     "listFlavor": "bar",
                     "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
                     "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint#dpAVGIncomeCountry",
                     "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#pvOrdersList",
                     "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#OrdersList",
                     "defaultSpan": {
-                        "rows": 7,
+                        "rows": 10,
                         "cols": 1
                     }
+                }
+            },
+            "StackOrdersList": {
+                "model": "mainService",
+                "template": "sap.ovp.cards.stack",
+                "settings": {
+                    "title": "Orders",
+                    "subTitle": "General Information",
+                    "sortBy": "Orderid",
+                    "sortOrder": "ascending",
+                    "entitySet": "OVPCards",
+                    "addODataSelect": "false",
+                    "objectStreamCardsSettings":{
+                        "annotationPath": "com.sap.vocabularies.UI.v1.Facets#StackOrdersList"
+                    },
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#Header,com.sap.vocabularies.UI.v1.Identification#Footer"
                 }
             }
         }
