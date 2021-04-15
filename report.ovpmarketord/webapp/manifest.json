@@ -52,7 +52,7 @@
                         "parameters": {},
                         "additionalParameters": "allowed"
                     },
-                    "semanticObject": "zpip_ovp_marketorder",
+                    "semanticObject": "zpip_products_git",
                     "action": "report",
                     "title": "{{AppTitle}}",
                     "subTitle": "",

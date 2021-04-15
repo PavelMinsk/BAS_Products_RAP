@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://36eb0fd9-d2e8-407e-9afa-551459baa1d4.abap.eu10.hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://36eb0fd9-d2e8-407e-9afa-551459baa1d4.abap.eu10.hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://36eb0fd9-d2e8-407e-9afa-551459baa1d4.abap.eu10.hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://36eb0fd9-d2e8-407e-9afa-551459baa1d4.abap.eu10.hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://36eb0fd9-d2e8-407e-9afa-551459baa1d4.abap.eu10.hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://36eb0fd9-d2e8-407e-9afa-551459baa1d4.abap.eu10.hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://36eb0fd9-d2e8-407e-9afa-551459baa1d4.abap.eu10.hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://36eb0fd9-d2e8-407e-9afa-551459baa1d4.abap.eu10.hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://36eb0fd9-d2e8-407e-9afa-551459baa1d4.abap.eu10.hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="cds_zpip_ui_ovp_market_ord" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ValueHelpCountryType" sap:label="Country Help View" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="mrktid"/>
+                </Key>
+                <Property Name="mrktid" Type="Edm.String" Nullable="false" MaxLength="3" sap:text="country" sap:label="Market ID"/>
+                <Property Name="country" Type="Edm.String" MaxLength="40" sap:label="Market Name"/>
+            </EntityType>
+            <EntityType Name="OVPCardsType" sap:semantics="aggregate" sap:label="OVP Cards for Market Order" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProdUuid" Type="Edm.Guid" sap:aggregation-role="dimension" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)"/>
+                <Property Name="MrktUuid" Type="Edm.Guid" sap:aggregation-role="dimension" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)"/>
+                <Property Name="OrderUuid" Type="Edm.Guid" sap:aggregation-role="dimension" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)"/>
+                <Property Name="CountryName" Type="Edm.String" MaxLength="40" sap:aggregation-role="dimension" sap:label="Market Name"/>
+                <Property Name="ProductName" Type="Edm.String" MaxLength="30" sap:aggregation-role="dimension" sap:label="Product Group Name"/>
+                <Property Name="CountByCountry" Type="Edm.Byte" sap:aggregation-role="measure" sap:label="Quantity by Countrys" sap:filterable="false"/>
+                <Property Name="CountByProdGrp" Type="Edm.Byte" sap:aggregation-role="measure" sap:label="Quantity by Product Groups" sap:filterable="false"/>
+                <Property Name="PhaseName" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Phase"/>
+                <Property Name="Orderid" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:label="Order ID"/>
+                <Property Name="Quantity" Type="Edm.Int16" sap:aggregation-role="dimension" sap:label="Quantity"/>
+                <Property Name="CalendarYear" Type="Edm.String" MaxLength="4" sap:aggregation-role="dimension" sap:display-format="NonNegative" sap:label="Calendar Year"/>
+                <Property Name="DeliveryDate" Type="Edm.DateTime" Precision="0" sap:aggregation-role="dimension" sap:display-format="Date" sap:label="Delivery Date"/>
+                <Property Name="Netamount" Type="Edm.Decimal" Precision="16" Scale="3" sap:aggregation-role="dimension" sap:unit="Amountcurr" sap:label="Net Amount"/>
+                <Property Name="Grossamount" Type="Edm.Decimal" Precision="16" Scale="3" sap:aggregation-role="dimension" sap:unit="Amountcurr" sap:label="Gross Amount"/>
+                <Property Name="Amountcurr" Type="Edm.String" MaxLength="5" sap:aggregation-role="dimension" sap:label="Currency" sap:quickinfo="Currency Key" sap:semantics="currency-code"/>
+                <Property Name="GrossIncom" Type="Edm.Decimal" Precision="17" Scale="3" sap:aggregation-role="dimension" sap:unit="Amountcurr"/>
+                <Property Name="GrossIncomPercentage" Type="Edm.Decimal" Precision="21" Scale="2" sap:aggregation-role="measure" sap:unit="Percentage" sap:label="Average Gross Income Percentage" sap:filterable="false"/>
+                <Property Name="Percentage" Type="Edm.String" MaxLength="3" sap:aggregation-role="dimension" sap:semantics="unit-of-measure"/>
+                <Property Name="TargetGrossIncomPercentage" Type="Edm.Byte" sap:aggregation-role="dimension"/>
+                <Property Name="GrossIncomPercentageList" Type="Edm.Decimal" Precision="21" Scale="2" sap:aggregation-role="dimension" sap:unit="Percentage"/>
+                <Property Name="GrossIncomPercentageKPI" Type="Edm.Decimal" Precision="21" Scale="2" sap:aggregation-role="measure" sap:unit="Percentage" sap:filterable="false"/>
+                <Property Name="TargetGrossIncomPercentageKPI" Type="Edm.Byte" sap:aggregation-role="dimension"/>
+                <Property Name="IconUrl" Type="Edm.String" MaxLength="74" sap:aggregation-role="dimension"/>
+            </EntityType>
+            <EntityType Name="GlobalFiltersType" sap:label="Global Filters for Market Order" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ProdUuid"/>
+                    <PropertyRef Name="MrktUuid"/>
+                    <PropertyRef Name="OrderUuid"/>
+                </Key>
+                <Property Name="ProdUuid" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)"/>
+                <Property Name="MrktUuid" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)"/>
+                <Property Name="OrderUuid" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)"/>
+                <Property Name="CountryName" Type="Edm.String" MaxLength="40" sap:label="Market Name" sap:value-list="fixed-values"/>
+                <Property Name="ProductName" Type="Edm.String" MaxLength="30" sap:label="Product Group Name" sap:value-list="fixed-values"/>
+                <Property Name="PhaseName" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label="Phase"/>
+                <Property Name="Orderid" Type="Edm.String" MaxLength="5" sap:label="Order ID"/>
+                <Property Name="CalendarYear" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Calendar Year"/>
+                <Property Name="DeliveryDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:filter-restriction="interval" sap:label="Delivery Date"/>
+                <Property Name="Netamount" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="Amountcurr" sap:label="Net Amount"/>
+                <Property Name="Grossamount" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="Amountcurr" sap:label="Gross Amount"/>
+                <Property Name="Amountcurr" Type="Edm.String" MaxLength="5" sap:label="Currency" sap:quickinfo="Currency Key" sap:semantics="currency-code"/>
+                <Property Name="GrossIncom" Type="Edm.Decimal" Precision="17" Scale="3" sap:unit="Amountcurr"/>
+                <Property Name="GrossIncomPercentage" Type="Edm.Decimal" Precision="21" Scale="2" sap:unit="Percentage"/>
+                <Property Name="Percentage" Type="Edm.String" MaxLength="3" sap:semantics="unit-of-measure"/>
+            </EntityType>
+            <EntityType Name="ValueHelpPhaseType" sap:label="Phase Value Help" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Phaseid"/>
+                </Key>
+                <Property Name="Phaseid" Type="Edm.Byte" Nullable="false" sap:text="PhaseName" sap:label="Phase ID"/>
+                <Property Name="PhaseName" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label="Phase"/>
+            </EntityType>
+            <EntityType Name="ValueHelpProdGrType" sap:label="Product group Value Help" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="pgid"/>
+                </Key>
+                <Property Name="pgid" Type="Edm.String" Nullable="false" MaxLength="3" sap:display-format="UpperCase" sap:text="pgname" sap:label="Product Group ID"/>
+                <Property Name="pgname" Type="Edm.String" MaxLength="30" sap:label="Product Group Name"/>
+            </EntityType>
+            <EntityType Name="CountryType" sap:label="Country" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Mrktid"/>
+                </Key>
+                <Property Name="Mrktid" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Market ID"/>
+                <Property Name="Country" Type="Edm.String" MaxLength="40" sap:label="Market Name"/>
+                <Property Name="Code" Type="Edm.String" MaxLength="2" sap:label="Language Code"/>
+                <Property Name="Imageurl" Type="Edm.String" MaxLength="200" sap:label="URL"/>
+            </EntityType>
+            <EntityType Name="MarketType" sap:label="Market" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ProdUuid"/>
+                    <PropertyRef Name="MrktUuid"/>
+                </Key>
+                <Property Name="ProdUuid" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)"/>
+                <Property Name="MrktUuid" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)"/>
+                <Property Name="Mrktid" Type="Edm.String" MaxLength="3" sap:text="CountryName" sap:label="Market ID"/>
+                <Property Name="CountryName" Type="Edm.String" MaxLength="40" sap:label="Market Name"/>
+                <Property Name="Status" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Market Status"/>
+                <Property Name="Startdate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Start Date"/>
+                <Property Name="Enddate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="End Date"/>
+                <NavigationProperty Name="to_Country" Relationship="cds_zpip_ui_ovp_market_ord.assoc_77610B3151A1393C8E403BF6390211BC" FromRole="FromRole_assoc_77610B3151A1393C8E403BF6390211BC" ToRole="ToRole_assoc_77610B3151A1393C8E403BF6390211BC"/>
+            </EntityType>
+            <EntityType Name="BaseCDSType" sap:label="Orders" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ProdUuid"/>
+                    <PropertyRef Name="MrktUuid"/>
+                    <PropertyRef Name="OrderUuid"/>
+                </Key>
+                <Property Name="ProdUuid" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)"/>
+                <Property Name="MrktUuid" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)"/>
+                <Property Name="OrderUuid" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)"/>
+                <Property Name="CountryName" Type="Edm.String" MaxLength="40" sap:label="Market Name"/>
+                <Property Name="CountByCountry" Type="Edm.Byte"/>
+                <Property Name="ProductName" Type="Edm.String" MaxLength="30" sap:label="Product Group Name"/>
+                <Property Name="CountByProdGrp" Type="Edm.Byte"/>
+                <Property Name="PhaseName" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label="Phase"/>
+                <Property Name="Orderid" Type="Edm.String" MaxLength="5" sap:label="Order ID"/>
+                <Property Name="Quantity" Type="Edm.Int16" sap:label="Quantity"/>
+                <Property Name="CalendarYear" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Calendar Year"/>
+                <Property Name="DeliveryDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Delivery Date"/>
+                <Property Name="Netamount" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="Amountcurr" sap:label="Net Amount"/>
+                <Property Name="Grossamount" Type="Edm.Decimal" Precision="16" Scale="3" sap:unit="Amountcurr" sap:label="Gross Amount"/>
+                <Property Name="Amountcurr" Type="Edm.String" MaxLength="5" sap:label="Currency" sap:quickinfo="Currency Key" sap:semantics="currency-code"/>
+                <Property Name="GrossIncom" Type="Edm.Decimal" Precision="17" Scale="3" sap:unit="Amountcurr"/>
+                <Property Name="GrossIncomPercentage" Type="Edm.Decimal" Precision="21" Scale="2" sap:unit="Percentage"/>
+                <Property Name="Percentage" Type="Edm.String" MaxLength="3" sap:semantics="unit-of-measure"/>
+                <Property Name="TargetGrossIncomPercentage" Type="Edm.Byte"/>
+                <Property Name="GrossIncomPercentageList" Type="Edm.Decimal" Precision="21" Scale="2" sap:unit="Percentage"/>
+                <Property Name="GrossIncomPercentageKPI" Type="Edm.Decimal" Precision="21" Scale="2" sap:unit="Percentage"/>
+                <Property Name="TargetGrossIncomPercentageKPI" Type="Edm.Byte"/>
+                <NavigationProperty Name="to_Market" Relationship="cds_zpip_ui_ovp_market_ord.assoc_F20D2B62F65C17DFB2A3166A83F5FCD0" FromRole="FromRole_assoc_F20D2B62F65C17DFB2A3166A83F5FCD0" ToRole="ToRole_assoc_F20D2B62F65C17DFB2A3166A83F5FCD0"/>
+                <NavigationProperty Name="to_Product" Relationship="cds_zpip_ui_ovp_market_ord.assoc_D626EFF6F281F4E7ADCD370EA91F91BF" FromRole="FromRole_assoc_D626EFF6F281F4E7ADCD370EA91F91BF" ToRole="ToRole_assoc_D626EFF6F281F4E7ADCD370EA91F91BF"/>
+            </EntityType>
+            <EntityType Name="PhaseType" sap:label="Phase" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Phaseid"/>
+                </Key>
+                <Property Name="Phaseid" Type="Edm.Byte" Nullable="false" sap:label="Phase ID"/>
+                <Property Name="Phase" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label="Phase"/>
+            </EntityType>
+            <EntityType Name="ProductType" sap:label="Product" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ProdUuid"/>
+                </Key>
+                <Property Name="ProdUuid" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)"/>
+                <Property Name="Prodid" Type="Edm.String" MaxLength="15" sap:label="Product ID"/>
+                <Property Name="Pgid" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:text="ProdGrpName" sap:label="Product Group ID"/>
+                <Property Name="ProdGrpName" Type="Edm.String" MaxLength="30" sap:label="Product Group Name"/>
+                <Property Name="Phaseid" Type="Edm.Byte" sap:text="PhaseName" sap:label="Phase ID"/>
+                <Property Name="PhaseName" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label="Phase"/>
+                <Property Name="Height" Type="Edm.Int32" sap:label="Height"/>
+                <Property Name="Depth" Type="Edm.Int32" sap:label="Depth"/>
+                <Property Name="Width" Type="Edm.Int32" sap:label="Width"/>
+                <Property Name="SizeUom" Type="Edm.String" MaxLength="3" sap:label="Internal UoM" sap:quickinfo="Unit of Measurement" sap:semantics="unit-of-measure"/>
+                <Property Name="Price" Type="Edm.Decimal" Precision="16" Scale="3" sap:label="Price"/>
+                <Property Name="PriceCurrency" Type="Edm.String" MaxLength="5" sap:label="Currency" sap:quickinfo="Currency Key" sap:semantics="currency-code"/>
+                <Property Name="Taxrate" Type="Edm.Decimal" Precision="5" Scale="2" sap:label="Tax Rate"/>
+                <NavigationProperty Name="to_Phase" Relationship="cds_zpip_ui_ovp_market_ord.assoc_B0D1472E48423C3253C616004BF33D47" FromRole="FromRole_assoc_B0D1472E48423C3253C616004BF33D47" ToRole="ToRole_assoc_B0D1472E48423C3253C616004BF33D47"/>
+            </EntityType>
+            <EntityType Name="ProdGrType" sap:label="Product groups" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pgid"/>
+                </Key>
+                <Property Name="Pgid" Type="Edm.String" Nullable="false" MaxLength="3" sap:display-format="UpperCase" sap:label="Product Group ID"/>
+                <Property Name="Pgname" Type="Edm.String" MaxLength="30" sap:label="Product Group Name"/>
+                <Property Name="Imageurl" Type="Edm.String" MaxLength="200" sap:label="URL"/>
+            </EntityType>
+            <Association Name="assoc_B0D1472E48423C3253C616004BF33D47" sap:content-version="1">
+                <End Type="cds_zpip_ui_ovp_market_ord.ProductType" Multiplicity="1" Role="FromRole_assoc_B0D1472E48423C3253C616004BF33D47"/>
+                <End Type="cds_zpip_ui_ovp_market_ord.PhaseType" Multiplicity="0..1" Role="ToRole_assoc_B0D1472E48423C3253C616004BF33D47"/>
+            </Association>
+            <Association Name="assoc_F20D2B62F65C17DFB2A3166A83F5FCD0" sap:content-version="1">
+                <End Type="cds_zpip_ui_ovp_market_ord.BaseCDSType" Multiplicity="1" Role="FromRole_assoc_F20D2B62F65C17DFB2A3166A83F5FCD0"/>
+                <End Type="cds_zpip_ui_ovp_market_ord.MarketType" Multiplicity="1" Role="ToRole_assoc_F20D2B62F65C17DFB2A3166A83F5FCD0"/>
+            </Association>
+            <Association Name="assoc_D626EFF6F281F4E7ADCD370EA91F91BF" sap:content-version="1">
+                <End Type="cds_zpip_ui_ovp_market_ord.BaseCDSType" Multiplicity="1" Role="FromRole_assoc_D626EFF6F281F4E7ADCD370EA91F91BF"/>
+                <End Type="cds_zpip_ui_ovp_market_ord.ProductType" Multiplicity="1" Role="ToRole_assoc_D626EFF6F281F4E7ADCD370EA91F91BF"/>
+            </Association>
+            <Association Name="assoc_77610B3151A1393C8E403BF6390211BC" sap:content-version="1">
+                <End Type="cds_zpip_ui_ovp_market_ord.MarketType" Multiplicity="1" Role="FromRole_assoc_77610B3151A1393C8E403BF6390211BC"/>
+                <End Type="cds_zpip_ui_ovp_market_ord.CountryType" Multiplicity="0..1" Role="ToRole_assoc_77610B3151A1393C8E403BF6390211BC"/>
+            </Association>
+            <EntityContainer Name="cds_zpip_ui_ovp_market_ord_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ValueHelpCountry" EntityType="cds_zpip_ui_ovp_market_ord.ValueHelpCountryType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="OVPCards" EntityType="cds_zpip_ui_ovp_market_ord.OVPCardsType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="GlobalFilters" EntityType="cds_zpip_ui_ovp_market_ord.GlobalFiltersType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ValueHelpPhase" EntityType="cds_zpip_ui_ovp_market_ord.ValueHelpPhaseType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ValueHelpProdGr" EntityType="cds_zpip_ui_ovp_market_ord.ValueHelpProdGrType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="Country" EntityType="cds_zpip_ui_ovp_market_ord.CountryType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="Market" EntityType="cds_zpip_ui_ovp_market_ord.MarketType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="BaseCDS" EntityType="cds_zpip_ui_ovp_market_ord.BaseCDSType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="Phase" EntityType="cds_zpip_ui_ovp_market_ord.PhaseType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="Product" EntityType="cds_zpip_ui_ovp_market_ord.ProductType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ProdGr" EntityType="cds_zpip_ui_ovp_market_ord.ProdGrType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <AssociationSet Name="assoc_F20D2B62F65C17DFB2A3166A83F5FCD0" Association="cds_zpip_ui_ovp_market_ord.assoc_F20D2B62F65C17DFB2A3166A83F5FCD0" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="BaseCDS" Role="FromRole_assoc_F20D2B62F65C17DFB2A3166A83F5FCD0"/>
+                    <End EntitySet="Market" Role="ToRole_assoc_F20D2B62F65C17DFB2A3166A83F5FCD0"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_D626EFF6F281F4E7ADCD370EA91F91BF" Association="cds_zpip_ui_ovp_market_ord.assoc_D626EFF6F281F4E7ADCD370EA91F91BF" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="BaseCDS" Role="FromRole_assoc_D626EFF6F281F4E7ADCD370EA91F91BF"/>
+                    <End EntitySet="Product" Role="ToRole_assoc_D626EFF6F281F4E7ADCD370EA91F91BF"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_B0D1472E48423C3253C616004BF33D47" Association="cds_zpip_ui_ovp_market_ord.assoc_B0D1472E48423C3253C616004BF33D47" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Product" Role="FromRole_assoc_B0D1472E48423C3253C616004BF33D47"/>
+                    <End EntitySet="Phase" Role="ToRole_assoc_B0D1472E48423C3253C616004BF33D47"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_77610B3151A1393C8E403BF6390211BC" Association="cds_zpip_ui_ovp_market_ord.assoc_77610B3151A1393C8E403BF6390211BC" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Market" Role="FromRole_assoc_77610B3151A1393C8E403BF6390211BC"/>
+                    <End EntitySet="Country" Role="ToRole_assoc_77610B3151A1393C8E403BF6390211BC"/>
+                </AssociationSet>
+            </EntityContainer>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.GlobalFiltersType/CountryName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Market Name"/>
+                        <PropertyValue Property="CollectionPath" String="ValueHelpCountry"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CountryName"/>
+                                    <PropertyValue Property="ValueListProperty" String="country"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="mrktid"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.GlobalFiltersType/ProductName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Product Group Name"/>
+                        <PropertyValue Property="CollectionPath" String="ValueHelpProdGr"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ProductName"/>
+                                    <PropertyValue Property="ValueListProperty" String="pgname"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="pgid"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.cds_zpip_ui_ovp_market_ord_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                <Annotation Term="Aggregation.ApplySupported">
+                    <Record>
+                        <PropertyValue Property="Transformations">
+                            <Collection>
+                                <String>aggregate</String>
+                                <String>groupby</String>
+                                <String>filter</String>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Rollup" EnumMember="None"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.cds_zpip_ui_ovp_market_ord_Entities/GlobalFilters" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="DeliveryDate"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleRange"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.cds_zpip_ui_ovp_market_ord_Entities/OVPCards" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>ID</PropertyPath>
+                                <PropertyPath>CountByCountry</PropertyPath>
+                                <PropertyPath>CountByProdGrp</PropertyPath>
+                                <PropertyPath>GrossIncomPercentage</PropertyPath>
+                                <PropertyPath>GrossIncomPercentageKPI</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>ID</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.ValueHelpCountryType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>country</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.ValueHelpPhaseType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>PhaseName</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.ValueHelpProdGrType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>pgname</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/CountryName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticObject" String="zpip_ovp_marketorder"/>
+            </Annotations>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/ProductName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticObject" String="zpip_ovp_marketorder"/>
+            </Annotations>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/Orderid" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticObject" String="zpip_ovp_marketorder"/>
+            </Annotations>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/CountByCountry" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/CountByProdGrp" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/GrossIncomPercentage" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/GrossIncomPercentageKPI" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.cds_zpip_ui_ovp_market_ord_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Org.OData.Capabilities.V1.BatchSupport">
+                    <Record Type="Org.OData.Capabilities.V1.BatchSupportType">
+                        <PropertyValue Property="ReferencesAcrossChangeSetsSupported" Bool="true"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="https://36eb0fd9-d2e8-407e-9afa-551459baa1d4.abap.eu10.hana.ondemand.com/sap/opu/odata/sap/ZPIP_UI_OVP_MARKET_ORD_O2/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://36eb0fd9-d2e8-407e-9afa-551459baa1d4.abap.eu10.hana.ondemand.com/sap/opu/odata/sap/ZPIP_UI_OVP_MARKET_ORD_O2/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
