@@ -214,11 +214,18 @@
                     "sortOrder": "ascending",
                     "entitySet": "OVPCards",
                     "addODataSelect": "false",
-                    "objectStreamCardsSettings":{
+                    "objectStreamCardsSettings": {
                         "annotationPath": "com.sap.vocabularies.UI.v1.Facets#StackOrdersList"
                     },
                     "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification#FaceSide,com.sap.vocabularies.UI.v1.Identification#FlipSide"
                 }
+            }
+        },
+        "filterSettings": {
+            "dateSettings": {
+                "useDateRange": true,
+                "exclude": false,
+                "selectedValues": "FROM,TO,DAYS,WEEK,MONTH,DATERANGE,TODAY,TOMORROW,YEAR,YESTERDAY"
             }
         }
     },
