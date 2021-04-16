@@ -56,7 +56,7 @@
                     "action": "manage",
                     "title": "{{AppTitle}}",
                     "subTitle": "{{AppTitle}}",
-                    "icon": "https://cdn3.iconfinder.com/data/icons/tiny-weather-1/512/sun-512.png",
+                    "icon": "https://icons.iconarchive.com/icons/rokey/popo-emotions/128/confident-icon.png",
                     "indicatorDataSource": {
                         "dataSource": "mainService",
                         "path": "/dynamic_dest/abap-cloud-default_abap-trial/sap/opu/odata/sap/ZPIP_UI_PRODUCT_O2/Product/$count",
