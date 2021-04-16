@@ -224,8 +224,8 @@
         "filterSettings": {
             "dateSettings": {
                 "useDateRange": true,
-                "exclude": false,
-                "selectedValues": "FROM,TO,DAYS,WEEK,MONTH,DATERANGE,TODAY,TOMORROW,YEAR,YESTERDAY"
+                "exclude": true,
+                "selectedValues": ""
             }
         }
     },
