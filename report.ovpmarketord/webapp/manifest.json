@@ -171,8 +171,8 @@
                 "model": "mainService",
                 "template": "sap.ovp.cards.list",
                 "settings": {
-                    "title": "{{Profitable of Orders}}",
-                    "subTitle": "{{ }}",
+                    "title": "Profitable of Orders",
+                    "subTitle": "",
                     "entitySet": "OVPCards",
                     "listType": "extended",
                     "listFlavor": "bar",
@@ -186,7 +186,7 @@
                     }
                 }
             },
-            "ListCard2": {
+            "OrdersList2": {
                 "model": "mainService",
                 "template": "sap.ovp.cards.list",
                 "settings": {
