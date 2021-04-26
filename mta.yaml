@@ -20,6 +20,10 @@ modules:
       - productsnamespacereportovpmarketord.zip
       name: productsnamespacereportovpmarketord
       target-path: resources/
+    - artifacts:
+      - productsnamespacereportalpmarketord.zip
+      name: productsnamespacereportalpmarketord
+      target-path: resources/
 - name: productsnamespacemanageproducts
   type: html5
   path: manage.products
@@ -63,6 +67,16 @@ modules:
 - name: productsnamespacereportovpmarketord
   type: html5
   path: report.ovpmarketord
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: productsnamespacereportalpmarketord
+  type: html5
+  path: report.alpmarketord
   build-parameters:
     build-result: dist
     builder: custom

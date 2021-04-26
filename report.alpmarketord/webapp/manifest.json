@@ -1,0 +1,233 @@
+{
+    "_version": "1.31.0",
+    "sap.app": {
+        "id": "productsnamespace.report.alpmarketord",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "tags": {
+            "keywords": []
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata/sap/ZPIP_UI_ALP_MARKET_ORD_O2/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "ZPIP_UI_ALP_MARKET_ORD_O2_VAN",
+                        "annotation"
+                    ],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "ZPIP_UI_ALP_MARKET_ORD_O2_VAN": {
+                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZPIP_UI_ALP_MARKET_ORD_O2_VAN',Version='0001')/$value/",
+                "type": "ODataAnnotation",
+                "settings": {
+                    "localUri": "localService/ZPIP_UI_ALP_MARKET_ORD_O2_VAN.xml"
+                }
+            },
+            "annotation": {
+                "type": "ODataAnnotation",
+                "uri": "annotations/annotation.xml",
+                "settings": {
+                    "localUri": "annotations/annotation.xml"
+                }
+            }
+        },
+        "offline": false,
+        "sourceTemplate": {
+            "id": "ui5template.smartTemplate",
+            "version": "1.40.12"
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "productsnamespace-report-alpmarketord-inbound": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "zpip_products_git",
+                    "action": "report",
+                    "title": "{{AppTitle}}",
+                    "subTitle": "",
+                    "icon": ""
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_hcb",
+            "sap_belize"
+        ]
+    },
+    "sap.ui5": {
+        "resources": {
+            "js": [],
+            "css": []
+        },
+        "dependencies": {
+            "minUI5Version": "1.65.0",
+            "libs": {
+                "sap.ui.core": {
+                    "lazy": false
+                },
+                "sap.ui.generic.app": {
+                    "lazy": false
+                },
+                "sap.suite.ui.generic.template": {
+                    "lazy": false
+                }
+            },
+            "components": {}
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties",
+                "preload": false
+            },
+            "@i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            },
+            "i18n|sap.suite.ui.generic.template.ListReport|ALPMarketOrder": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/ListReport/ALPMarketOrder/i18n.properties"
+            },
+            "i18n|sap.suite.ui.generic.template.ObjectPage|ALPMarketOrder": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/ObjectPage/ALPMarketOrder/i18n.properties"
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            },
+            "KPIModel": {
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "useBatch": true,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                },
+                "dataSource": "mainService",
+                "preload": true
+            }
+        },
+        "extends": {
+            "extensions": {}
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        }
+    },
+    "sap.ui.generic.app": {
+        "_version": "1.3.0",
+        "settings": {
+            "forceGlobalRefresh": false,
+            "objectPageHeaderType": "Dynamic",
+            "showDraftToggle": false
+        },
+        "pages": {
+            "AnalyticalListPage|ALPMarketOrder": {
+                "entitySet": "ALPMarketOrder",
+                "component": {
+                    "name": "sap.suite.ui.generic.template.AnalyticalListPage",
+                    "list": true,
+                    "settings": {
+                        "qualifier": "MainChart",
+                        "autoHide": true,
+                        "condensedTableLayout": true,
+                        "dataLoadSettings": {
+                            "loadDataOnAppLaunch": "always"
+                        },
+                        "showGoButtonOnFilterBar": true,
+                        "smartVariantManagement": true,
+                        "keyPerformanceIndicators": {
+                            "AVG Gross Income": {
+                                "model": "KPIModel",
+                                "entitySet": "ALPMarketOrder",
+                                "qualifier": "KPIGrossIncomeByCountryAvg"
+                            },
+                            "MAX Gross Income": {
+                                "model": "KPIModel",
+                                "entitySet": "ALPMarketOrder",
+                                "qualifier": "KPIGrossIncomeByCountryMax"
+                            },
+                            "MIN Gross Income": {
+                                "model": "KPIModel",
+                                "entitySet": "ALPMarketOrder",
+                                "qualifier": "KPIGrossIncomeByCountryMin"
+                            },
+                            "Total Gross Income": {
+                                "model": "KPIModel",
+                                "entitySet": "ALPMarketOrder",
+                                "qualifier": "KPIGrossIncomeByCountry"
+                            },
+                            "Gross Amount By Country": {
+                                "model": "KPIModel",
+                                "entitySet": "ALPMarketOrder",
+                                "qualifier": "KPIGrossAmountByCountry"
+                            }
+                        }
+                    }
+                },
+                "pages": {
+                    "ObjectPage|ALPMarketOrder": {
+                        "entitySet": "ALPMarketOrder",
+                        "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
+                        "component": {
+                            "name": "sap.suite.ui.generic.template.ObjectPage"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "sap.platform.abap": {
+        "uri": ""
+    },
+    "sap.fiori": {
+        "registrationIds": [],
+        "archeType": "transactional"
+    },
+    "sap.platform.hcp": {
+        "uri": ""
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "products_business_solutions"
+    }
+}

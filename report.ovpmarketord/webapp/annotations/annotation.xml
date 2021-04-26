@@ -11,8 +11,17 @@
     <edmx:Reference Uri="/sap/opu/odata/sap/ZPIP_UI_OVP_MARKET_ORD_O2/$metadata">
         <edmx:Include Namespace="cds_zpip_ui_ovp_market_ord"/>
     </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Measures.V1.xml">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+
+   
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="productsnamespace">
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/GrossIncomPercentage">
+                <Annotation Term="Measures.Unit" String="%"/>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
+
 </edmx:Edmx>
