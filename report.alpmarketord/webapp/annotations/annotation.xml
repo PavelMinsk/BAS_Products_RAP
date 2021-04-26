@@ -51,11 +51,11 @@
                     </Record>
                 </Annotation>
             </Annotations>
-
+        </Schema>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="products_namespace">
             <Annotations Target="cds_zpip_ui_alp_market_ord.ALPMarketOrderType/GrossIncom">
                 <Annotation Term="Measures.ISOCurrency" Path="Amountcurr"/>
             </Annotations>
-        
-         </Schema>
+        </Schema>
     </edmx:DataServices>
 </edmx:Edmx>

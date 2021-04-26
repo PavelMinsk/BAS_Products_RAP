@@ -21,11 +21,13 @@
             <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/GrossIncomPercentage">
                 <Annotation Term="Measures.Unit" String="%"/>
             </Annotations>
-        
+        </Schema>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="productsnamespace">    
             <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/CountByCountry">
                 <Annotation Term="Measures.Unit" String="PCS"/>
             </Annotations>
-        
+        </Schema>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="productsnamespace">    
             <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/CountByProdGrp">
                 <Annotation Term="Measures.Unit" String="PCS"/>
             </Annotations>
