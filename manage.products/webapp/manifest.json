@@ -56,7 +56,7 @@
                     "action": "manage",
                     "title": "{{AppTitle}}",
                     "subTitle": "{{AppTitle}}",
-                    "icon": "https://cdn3.iconfinder.com/data/icons/computing-technology/90/Cloud_storage-RAD-512.png",
+                    "icon": "https://cdn2.iconfinder.com/data/icons/weather-collection-1/512/rainnyday-512.png",
                     "indicatorDataSource": {
                         "dataSource": "mainService",
                         "path": "/dynamic_dest/abap-cloud-default_abap-trial/sap/opu/odata/sap/ZPIP_UI_PRODUCT_O2/Product/$count",
