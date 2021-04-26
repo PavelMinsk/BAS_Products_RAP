@@ -21,6 +21,14 @@
             <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/GrossIncomPercentage">
                 <Annotation Term="Measures.Unit" String="%"/>
             </Annotations>
+        
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/CountByCountry">
+                <Annotation Term="Measures.Unit" String="PCS"/>
+            </Annotations>
+        
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/CountByProdGrp">
+                <Annotation Term="Measures.Unit" String="PCS"/>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 
