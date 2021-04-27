@@ -51,11 +51,20 @@
                     </Record>
                 </Annotation>
             </Annotations>
-        </Schema>
-        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="products_namespace">
+            
+            <Annotations Target="cds_zpip_ui_alp_market_ord.ALPMarketOrderType/Grossamount">
+                <Annotation Term="Org.OData.Measures.V1.ISOCurrency" Path="Amountcurr"/>
+            </Annotations>
+
+            <Annotations Target="cds_zpip_ui_alp_market_ord.ALPMarketOrderType/KPITargGrossAmount">
+                <Annotation Term="Org.OData.Measures.V1.ISOCurrency" Path="Amountcurr"/>
+            </Annotations>
+
             <Annotations Target="cds_zpip_ui_alp_market_ord.ALPMarketOrderType/GrossIncom">
                 <Annotation Term="Measures.ISOCurrency" Path="Amountcurr"/>
             </Annotations>
+        
         </Schema>
+        
     </edmx:DataServices>
 </edmx:Edmx>
