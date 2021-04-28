@@ -214,6 +214,16 @@
                     }
                 }
             }
+        },
+        "filterSettings": {
+            "dateSettings": {
+                "fields": {
+                    "DeliveryDate": {
+                        "selectedValues": "DATE,QUARTER1,QUARTER2,QUARTER3,QUARTER4,MONTH,DATERANGE,YEAR",
+                        "exclude": false
+                    }
+                }
+            }
         }
     },
     "sap.platform.abap": {
