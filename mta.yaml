@@ -24,6 +24,10 @@ modules:
       - productsnamespacereportalpmarketord.zip
       name: productsnamespacereportalpmarketord
       target-path: resources/
+    - artifacts:
+      - shelltimeoutshellplugin.zip
+      name: shelltimeoutshellplugin
+      target-path: resources/
 - name: productsnamespacemanageproducts
   type: html5
   path: manage.products
@@ -77,6 +81,16 @@ modules:
 - name: productsnamespacereportalpmarketord
   type: html5
   path: report.alpmarketord
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: shelltimeoutshellplugin
+  type: html5
+  path: shell_plugin
   build-parameters:
     build-result: dist
     builder: custom
