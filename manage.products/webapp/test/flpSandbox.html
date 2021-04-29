@@ -58,7 +58,7 @@
 	<!-- Bootstrap the UI5 core library -->
 	<script id="sap-ui-bootstrap"
 		src="/resources/sap-ui-core.js"
-		data-sap-ui-libs="sap.m, sap.ushell, sap.ui.core, sap.f, sap.ui.comp, sap.ui.table, sap.suite.ui.generic.template, sap.ui.generic.app"
+		data-sap-ui-libs="sap.m, sap.ushell, sap.ui.core, sap.f, sap.ui.comp, sap.ui.table, sap.suite.ui.generic.template, sap.ui.generic.app, sap.ui.fl"
 		data-sap-ui-async="true"
 		data-sap-ui-preload="async"
 		data-sap-ui-theme="sap_fiori_3"
@@ -71,7 +71,22 @@
 		<script src="../utils/locate-reuse-libs.js" data-sap-ui-manifest-uri="../manifest.json">
 		</script>
 	<!-- relevant for version < 1.78.0 only -->
-	<script src="changes_preview.js"></script>
+    <script src="changes_preview.js"></script>
+        
+    <script>
+        sap.ui.getCore().attachInit(function() {
+            sap.ui.require([
+                "sap/ui/fl/FakeLrepConnectorLocalStorage"
+            ], function (FakeLrepConnectorLocalStorage) {
+                FakeLrepConnectorLocalStorage.enableFakeConnector(
+                    null,
+                    "teched.app00.productsnamespace.manage.products.Component",
+                    "1.0.0"    
+                );
+            });
+        });
+    </script>
+
 </head>
 
 <!-- UI Content -->

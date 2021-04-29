@@ -88,6 +88,7 @@
         ]
     },
     "sap.ui5": {
+        "flexEnabled": true,
         "resources": {
             "js": [],
             "css": []
