@@ -54,7 +54,7 @@
         }
     },
     "sap.ui5": {
-        "flexEnabled": false,
+        "flexEnabled": true,
         "rootView": {
             "viewName": "shell.timeout.shellplugin.view.View1",
             "type": "XML",

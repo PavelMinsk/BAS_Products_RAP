@@ -210,10 +210,10 @@
                 "settings": {
                     "title": "Orders",
                     "subTitle": "General Information",
-                    "sortBy": "Orderid",
-                    "sortOrder": "ascending",
                     "entitySet": "OVPCards",
                     "addODataSelect": "false",
+                    "sortBy": "CountryName", 
+                    "sortOrder": "ascending",
                     "objectStreamCardsSettings": {
                         "annotationPath": "com.sap.vocabularies.UI.v1.Facets#StackOrdersList"
                     },

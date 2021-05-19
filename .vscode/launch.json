@@ -1,257 +1,257 @@
 {
-    "configurations": [
-        {
-            "name": "Start manage.products",
-            "type": "node",
-            "request": "launch",
-            "runtimeExecutable": "npm",
-            "cwd": "${workspaceFolder}/manage.products",
-            "windows": {
-                "runtimeExecutable": "npm.cmd"
-            },
-            "runtimeArgs": [
-                "run-script",
-                "start"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "port": 9229,
-            "env": {
-                "DEBUG": "--inspect",
-                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/manage.products\"}"
-            }
-        },
-        {
-            "name": "Start manage.products Mock",
-            "type": "node",
-            "request": "launch",
-            "cwd": "${workspaceFolder}/manage.products",
-            "runtimeExecutable": "npm",
-            "windows": {
-                "runtimeExecutable": "npm.cmd"
-            },
-            "runtimeArgs": [
-                "run-script",
-                "start-mock"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "port": 9229,
-            "env": {
-                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/manage.products\"}"
-            }
-        },
-        {
-            "name": "Start manage.products Local",
-            "type": "node",
-            "request": "launch",
-            "cwd": "${workspaceFolder}/manage.products",
-            "runtimeExecutable": "npm",
-            "windows": {
-                "runtimeExecutable": "npm.cmd"
-            },
-            "runtimeArgs": [
-                "run-script",
-                "start-local"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "port": 9229,
-            "env": {
-                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/manage.products\"}"
-            }
-        },
-        {
-            "name": "Start report2.ovpmarketord",
-            "type": "node",
-            "request": "launch",
-            "runtimeExecutable": "npm",
-            "cwd": "${workspaceFolder}/report2.ovpmarketord",
-            "windows": {
-                "runtimeExecutable": "npm.cmd"
-            },
-            "runtimeArgs": [
-                "run-script",
-                "start"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "port": 9229,
-            "env": {
-                "DEBUG": "--inspect",
-                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/report2.ovpmarketord\"}"
-            }
-        },
-        {
-            "name": "Start report2.ovpmarketord Mock",
-            "type": "node",
-            "request": "launch",
-            "cwd": "${workspaceFolder}/report2.ovpmarketord",
-            "runtimeExecutable": "npm",
-            "windows": {
-                "runtimeExecutable": "npm.cmd"
-            },
-            "runtimeArgs": [
-                "run-script",
-                "start-mock"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "port": 9229,
-            "env": {
-                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/report2.ovpmarketord\"}"
-            }
-        },
-        {
-            "name": "Start report2.ovpmarketord Local",
-            "type": "node",
-            "request": "launch",
-            "cwd": "${workspaceFolder}/report2.ovpmarketord",
-            "runtimeExecutable": "npm",
-            "windows": {
-                "runtimeExecutable": "npm.cmd"
-            },
-            "runtimeArgs": [
-                "run-script",
-                "start-local"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "port": 9229,
-            "env": {
-                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/report2.ovpmarketord\"}"
-            }
-        },
-        {
-            "name": "Start report.alpmarketord",
-            "type": "node",
-            "request": "launch",
-            "runtimeExecutable": "npm",
-            "cwd": "${workspaceFolder}/report.alpmarketord",
-            "windows": {
-                "runtimeExecutable": "npm.cmd"
-            },
-            "runtimeArgs": [
-                "run-script",
-                "start"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "port": 9229,
-            "env": {
-                "DEBUG": "--inspect",
-                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/report.alpmarketord\"}"
-            }
-        },
-        {
-            "name": "Start report.alpmarketord Mock",
-            "type": "node",
-            "request": "launch",
-            "cwd": "${workspaceFolder}/report.alpmarketord",
-            "runtimeExecutable": "npm",
-            "windows": {
-                "runtimeExecutable": "npm.cmd"
-            },
-            "runtimeArgs": [
-                "run-script",
-                "start-mock"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "port": 9229,
-            "env": {
-                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/report.alpmarketord\"}"
-            }
-        },
-        {
-            "name": "Start report.alpmarketord Local",
-            "type": "node",
-            "request": "launch",
-            "cwd": "${workspaceFolder}/report.alpmarketord",
-            "runtimeExecutable": "npm",
-            "windows": {
-                "runtimeExecutable": "npm.cmd"
-            },
-            "runtimeArgs": [
-                "run-script",
-                "start-local"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "port": 9229,
-            "env": {
-                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/report.alpmarketord\"}"
-            }
-        },
-        {
-            "name": "Start shell_plugin",
-            "type": "node",
-            "request": "launch",
-            "runtimeExecutable": "npm",
-            "cwd": "${workspaceFolder}/shell_plugin",
-            "windows": {
-                "runtimeExecutable": "npm.cmd"
-            },
-            "runtimeArgs": [
-                "run-script",
-                "start"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "port": 9229,
-            "env": {
-                "DEBUG": "--inspect",
-                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/shell_plugin\"}"
-            }
-        },
-        {
-            "name": "Start shell_plugin Mock",
-            "type": "node",
-            "request": "launch",
-            "cwd": "${workspaceFolder}/shell_plugin",
-            "runtimeExecutable": "npm",
-            "windows": {
-                "runtimeExecutable": "npm.cmd"
-            },
-            "runtimeArgs": [
-                "run-script",
-                "start-mock"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "port": 9229,
-            "env": {
-                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/shell_plugin\"}"
-            }
-        },
-        {
-            "name": "Start shell_plugin Local",
-            "type": "node",
-            "request": "launch",
-            "cwd": "${workspaceFolder}/shell_plugin",
-            "runtimeExecutable": "npm",
-            "windows": {
-                "runtimeExecutable": "npm.cmd"
-            },
-            "runtimeArgs": [
-                "run-script",
-                "start-local"
-            ],
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "port": 9229,
-            "env": {
-                "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/shell_plugin\"}"
-            }
-        }
-    ],
-    "compounds": [],
-    "inputs": [
-        {
-            "id": "UI5Version",
-            "type": "command",
-            "command": "sap.ux.appGenerator.ui5Version"
-        }
-    ],
-    "version": "0.2.0"
+  "configurations": [
+    {
+      "name": "Start manage.products",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "cwd": "${workspaceFolder}/manage.products",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "DEBUG": "--inspect",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/manage.products\"}"
+      }
+    },
+    {
+      "name": "Start manage.products Mock",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/manage.products",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start-mock"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/manage.products\"}"
+      }
+    },
+    {
+      "name": "Start manage.products Local",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/manage.products",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start-local"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/manage.products\"}"
+      }
+    },
+    {
+      "name": "Start report2.ovpmarketord",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "cwd": "${workspaceFolder}/report2.ovpmarketord",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "DEBUG": "--inspect",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/report2.ovpmarketord\"}"
+      }
+    },
+    {
+      "name": "Start report2.ovpmarketord Mock",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/report2.ovpmarketord",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start-mock"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/report2.ovpmarketord\"}"
+      }
+    },
+    {
+      "name": "Start report2.ovpmarketord Local",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/report2.ovpmarketord",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start-local"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/report2.ovpmarketord\"}"
+      }
+    },
+    {
+      "name": "Start report.alpmarketord",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "cwd": "${workspaceFolder}/report.alpmarketord",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "DEBUG": "--inspect",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/report.alpmarketord\"}"
+      }
+    },
+    {
+      "name": "Start report.alpmarketord Mock",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/report.alpmarketord",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start-mock"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/report.alpmarketord\"}"
+      }
+    },
+    {
+      "name": "Start report.alpmarketord Local",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/report.alpmarketord",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start-local"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/report.alpmarketord\"}"
+      }
+    },
+    {
+      "name": "Start shell_plugin",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "cwd": "${workspaceFolder}/shell_plugin",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "DEBUG": "--inspect",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/shell_plugin\"}"
+      }
+    },
+    {
+      "name": "Start shell_plugin Mock",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/shell_plugin",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start-mock"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/shell_plugin\"}"
+      }
+    },
+    {
+      "name": "Start shell_plugin Local",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/shell_plugin",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": [
+        "run-script",
+        "start-local"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229,
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zpip_products_git/shell_plugin\"}"
+      }
+    }
+  ],
+  "compounds": [],
+  "inputs": [
+    {
+      "id": "UI5Version",
+      "type": "command",
+      "command": "sap.ux.appGenerator.ui5Version"
+    }
+  ],
+  "version": "0.2.0"
 }
