@@ -52,7 +52,7 @@
                         "parameters": {},
                         "additionalParameters": "allowed"
                     },
-                    "semanticObject": "zpip_products_git",
+                    "semanticObject": "zpip_products2_git",
                     "action": "manage",
                     "title": "{{AppTitle}}",
                     "subTitle": "{{AppTitle}}",
