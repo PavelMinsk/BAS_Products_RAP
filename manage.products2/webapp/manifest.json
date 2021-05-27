@@ -88,6 +88,7 @@
         ]
     },
     "sap.ui5": {
+        "flexEnabled": true,
         "resources": {
             "js": [],
             "css": []
@@ -154,7 +155,6 @@
         "settings": {
             "forceGlobalRefresh": false,
             "objectPageHeaderType": "Dynamic",
-            "considerAnalyticalParameters": true,
             "showDraftToggle": false,
             "flexibleColumnLayout": {
                 "defaultTwoColumnLayoutType": "TwoColumnsBeginExpanded",
@@ -189,19 +189,27 @@
                             "name": "sap.suite.ui.generic.template.ObjectPage",
                             "settings": {
                                 "sections": {
-                                    "to_Market::com.sap.vocabularies.UI.v1.Chart::MarketQuantity": {},
-                                    "to_Market::com.sap.vocabularies.UI.v1.Chart::MarketAmounts": {},
                                     "to_Market::com.sap.vocabularies.UI.v1.LineItem": {}
                                 }
                             }
                         },
                         "pages": {
-                            "ObjectPage|to_MarketOrder": {
-                                "navigationProperty": "to_MarketOrder",
-                                "entitySet": "MarketOrder",
+                            "ObjectPage|to_Market": {
+                                "navigationProperty": "to_Market",
+                                "entitySet": "Market",
                                 "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
                                 "component": {
                                     "name": "sap.suite.ui.generic.template.ObjectPage"
+                                },
+                                "pages": {
+                                    "ObjectPage|to_MarketOrder": {
+                                        "navigationProperty": "to_MarketOrder",
+                                        "entitySet": "MarketOrder",
+                                        "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
+                                        "component": {
+                                            "name": "sap.suite.ui.generic.template.ObjectPage"
+                                        }        
+                                    }       
                                 }
                             }
                         }
