@@ -172,7 +172,7 @@
                 "template": "sap.ovp.cards.list",
                 "settings": {
                     "title": "Profitable of Orders",
-                    "subTitle": "",
+                    "subTitle": "Comparing the maximum value",
                     "entitySet": "OVPCards",
                     "listType": "extended",
                     "listFlavor": "bar",
@@ -191,6 +191,7 @@
                 "template": "sap.ovp.cards.list",
                 "settings": {
                     "title": "Profitable of Orders",
+                    "subTitle": "Comparing the average value",
                     "entitySet": "OVPCards",
                     "listType": "condensed",
                     "listFlavor": "bar",

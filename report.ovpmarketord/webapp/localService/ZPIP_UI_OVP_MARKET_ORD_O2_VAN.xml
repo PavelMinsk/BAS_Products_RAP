@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="/sap/opu/odata/sap/ZPIP_UI_OVP_MARKET_ORD_O2/$metadata">
+        <edmx:Include Namespace="cds_zpip_ui_ovp_market_ord"/>
+    </edmx:Reference>
     <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value">
         <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
     </edmx:Reference>
@@ -33,6 +36,18 @@
         <Schema Namespace="zpip_ui_ovp_market_ord_o2_van.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
             
             <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/GrossIncomPercentage">
+                    <Annotation Term="Measures.Unit" String="%"/>
+            </Annotations>
+
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/TargetGrossIncomPercentage">
+                    <Annotation Term="Measures.Unit" String="%"/>
+            </Annotations>
+
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/GrossIncomPercentageKPI">
+                    <Annotation Term="Measures.Unit" String="%"/>
+            </Annotations>
+
+            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/TargetGrossIncomPercentageKPI">
                     <Annotation Term="Measures.Unit" String="%"/>
             </Annotations>
             
