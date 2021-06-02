@@ -29,7 +29,7 @@
             <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/GrossIncomPercentageKPI">
                 <Annotation Term="Measures.Unit" String="%"/>
             </Annotations>
-
+            
             <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/TargetGrossIncomPercentageKPI">
                 <Annotation Term="Measures.Unit" String="%"/>
             </Annotations>
