@@ -32,9 +32,7 @@
     <edmx:DataServices>
         <Schema Namespace="zpip_ui_ovp_market_ord_o2_van.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
             
-            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/GrossIncomPercentage">
-                    <Annotation Term="Measures.Unit" String="%"/>
-            </Annotations>
+            
             
             <Annotations Target="cds_zpip_ui_ovp_market_ord.ValueHelpCountryType">
                 <Annotation Term="UI.PresentationVariant">
