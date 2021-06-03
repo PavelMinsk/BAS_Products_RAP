@@ -28,10 +28,6 @@ modules:
       - shelltimeoutshellplugin.zip
       name: shelltimeoutshellplugin
       target-path: resources/
-    - artifacts:
-      - productsnamespacemanageproducts2.zip
-      name: productsnamespacemanageproducts2
-      target-path: resources/
 - name: productsnamespacemanageproducts
   type: html5
   path: manage.products
@@ -95,16 +91,6 @@ modules:
 - name: shelltimeoutshellplugin
   type: html5
   path: shell_plugin
-  build-parameters:
-    build-result: dist
-    builder: custom
-    commands:
-    - npm install
-    - npm run build:cf
-    supported-platforms: []
-- name: productsnamespacemanageproducts2
-  type: html5
-  path: manage.products2
   build-parameters:
     build-result: dist
     builder: custom
