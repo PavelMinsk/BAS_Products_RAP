@@ -24,33 +24,14 @@
     <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='')/$value">
         <edmx:Include Namespace="Org.OData.Capabilities.V1"/>
     </edmx:Reference>
-
     <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Measures.V1.xml">
         <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
     </edmx:Reference>
-
     <edmx:Reference Uri="../../../sap/zpip_ui_ovp_market_ord_o2/$metadata">
         <edmx:Include Namespace="ZPIP_UI_OVP_MARKET_ORD_O2" Alias="SAP"/>
     </edmx:Reference>
     <edmx:DataServices>
         <Schema Namespace="zpip_ui_ovp_market_ord_o2_van.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-            
-            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/GrossIncomPercentage">
-                    <Annotation Term="Measures.Unit" String="%"/>
-            </Annotations>
-
-            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/TargetGrossIncomPercentage">
-                    <Annotation Term="Measures.Unit" String="%"/>
-            </Annotations>
-
-            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/GrossIncomPercentageKPI">
-                    <Annotation Term="Measures.Unit" String="%"/>
-            </Annotations>
-            
-            <Annotations Target="cds_zpip_ui_ovp_market_ord.OVPCardsType/TargetGrossIncomPercentageKPI">
-                    <Annotation Term="Measures.Unit" String="%"/>
-            </Annotations>
-            
             <Annotations Target="cds_zpip_ui_ovp_market_ord.ValueHelpCountryType">
                 <Annotation Term="UI.PresentationVariant">
                     <Record>
