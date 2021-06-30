@@ -130,5 +130,10 @@ resources:
     service: xsuaa
     service-name: zpip_products_git-xsuaa-service
     service-plan: application
+- name: ui5-flexibility-keyuser
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service-plan: keyuser
+    service: ui5-flexibility-keyuser
 parameters:
   deploy_mode: html5-repo
