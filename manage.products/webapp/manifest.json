@@ -157,7 +157,7 @@
             "objectPageHeaderType": "Dynamic",
             "showDraftToggle": false,
             "flexibleColumnLayout": {
-                "defaultTwoColumnLayoutType": "TwoColumnsBeginExpanded",
+                "defaultTwoColumnLayoutType": "TwoColumnsMidExpanded",
                 "defaultThreeColumnLayoutType": "ThreeColumnsMidExpanded"
             }
         },
@@ -178,6 +178,9 @@
                         },
                         "dataLoadSettings": {
                             "loadDataOnAppLaunch": "always"
+                        },
+                        "tableSettings": {
+                            "type": "ResponsiveTable"
                         }
                     }
                 },
