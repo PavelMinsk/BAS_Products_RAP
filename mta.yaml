@@ -13,7 +13,6 @@ modules:
   build-parameters:
     build-result: resources
     requires:
-    - name: ui5-flexibility-keyuser
     - artifacts:
       - productsnamespacemanageproducts.zip
       name: productsnamespacemanageproducts
@@ -43,7 +42,6 @@ modules:
 - name: zpip_products_git-destination-content
   type: com.sap.application.content
   requires:
-  - name: ui5-flexibility-keyuser
   - name: zpip_products_git-destination-service
     parameters:
       content-target: true
