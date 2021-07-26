@@ -143,101 +143,101 @@
                 },
                 "dataSource": "mainService",
                 "preload": true
-            },
-            "extends": {
-                "extensions": {}
-            },
-            "contentDensities": {
-                "compact": true,
-                "cozy": true
             }
         },
-        "sap.ui.generic.app": {
-            "_version": "1.3.0",
-            "settings": {
-                "forceGlobalRefresh": false,
-                "objectPageHeaderType": "Dynamic",
-                "showDraftToggle": false
-            },
-            "pages": {
-                "AnalyticalListPage|ALPMarketOrder": {
-                    "entitySet": "ALPMarketOrder",
-                    "component": {
-                        "name": "sap.suite.ui.generic.template.AnalyticalListPage",
-                        "list": true,
-                        "settings": {
-                            "qualifier": "MainChart",
-                            "autoHide": true,
-                            "condensedTableLayout": true,
-                            "dataLoadSettings": {
-                                "loadDataOnAppLaunch": "always"
-                            },
-                            "showGoButtonOnFilterBar": true,
-                            "smartVariantManagement": true,
-                            "keyPerformanceIndicators": {
-                                "AVG Gross Income": {
-                                    "model": "KPIModel",
-                                    "entitySet": "ALPMarketOrder",
-                                    "qualifier": "KPIGrossIncomeByCountryAvg"
-                                },
-                                "MAX Gross Income": {
-                                    "model": "KPIModel",
-                                    "entitySet": "ALPMarketOrder",
-                                    "qualifier": "KPIGrossIncomeByCountryMax"
-                                },
-                                "MIN Gross Income": {
-                                    "model": "KPIModel",
-                                    "entitySet": "ALPMarketOrder",
-                                    "qualifier": "KPIGrossIncomeByCountryMin"
-                                },
-                                "Total Gross Income": {
-                                    "model": "KPIModel",
-                                    "entitySet": "ALPMarketOrder",
-                                    "qualifier": "KPIGrossIncomeByCountry"
-                                },
-                                "Gross Amount By Country": {
-                                    "model": "KPIModel",
-                                    "entitySet": "ALPMarketOrder",
-                                    "qualifier": "KPIGrossAmountByCountry"
-                                }
-                            }
-                        }
-                    },
-                    "pages": {
-                        "ObjectPage|ALPMarketOrder": {
-                            "entitySet": "ALPMarketOrder",
-                            "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
-                            "component": {
-                                "name": "sap.suite.ui.generic.template.ObjectPage"
-                            }
-                        }
-                    }
-                }
-            },
-            "filterSettings": {
-                "dateSettings": {
-                    "fields": {
-                        "DeliveryDate": {
-                            "selectedValues": "DATE,QUARTER1,QUARTER2,QUARTER3,QUARTER4,MONTH,DATERANGE,YEAR",
-                            "exclude": false
-                        }
-                    }
-                }
-            }
+        "extends": {
+            "extensions": {}
         },
-        "sap.platform.abap": {
-            "uri": ""
-        },
-        "sap.fiori": {
-            "registrationIds": [],
-            "archeType": "transactional"
-        },
-        "sap.platform.hcp": {
-            "uri": ""
-        },
-        "sap.cloud": {
-            "public": true,
-            "service": "products_business_solutions"
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
         }
-    }    
+    },
+    "sap.ui.generic.app": {
+        "_version": "1.3.0",
+        "settings": {
+            "forceGlobalRefresh": false,
+            "objectPageHeaderType": "Dynamic",
+            "showDraftToggle": false
+        },
+        "pages": {
+            "AnalyticalListPage|ALPMarketOrder": {
+                "entitySet": "ALPMarketOrder",
+                "component": {
+                    "name": "sap.suite.ui.generic.template.AnalyticalListPage",
+                    "list": true,
+                    "settings": {
+                        "qualifier": "MainChart",
+                        "autoHide": true,
+                        "condensedTableLayout": true,
+                        "dataLoadSettings": {
+                            "loadDataOnAppLaunch": "always"
+                        },
+                        "showGoButtonOnFilterBar": true,
+                        "smartVariantManagement": true,
+                        "keyPerformanceIndicators": {
+                            "AVG Gross Income": {
+                                "model": "KPIModel",
+                                "entitySet": "ALPMarketOrder",
+                                "qualifier": "KPIGrossIncomeByCountryAvg"
+                            },
+                            "MAX Gross Income": {
+                                "model": "KPIModel",
+                                "entitySet": "ALPMarketOrder",
+                                "qualifier": "KPIGrossIncomeByCountryMax"
+                            },
+                            "MIN Gross Income": {
+                                "model": "KPIModel",
+                                "entitySet": "ALPMarketOrder",
+                                "qualifier": "KPIGrossIncomeByCountryMin"
+                            },
+                            "Total Gross Income": {
+                                "model": "KPIModel",
+                                "entitySet": "ALPMarketOrder",
+                                "qualifier": "KPIGrossIncomeByCountry"
+                            },
+                            "Gross Amount By Country": {
+                                "model": "KPIModel",
+                                "entitySet": "ALPMarketOrder",
+                                "qualifier": "KPIGrossAmountByCountry"
+                            }
+                        }
+                    }
+                },
+                "pages": {
+                    "ObjectPage|ALPMarketOrder": {
+                        "entitySet": "ALPMarketOrder",
+                        "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
+                        "component": {
+                            "name": "sap.suite.ui.generic.template.ObjectPage"
+                        }
+                    }
+                }
+            }
+        },
+        "filterSettings": {
+            "dateSettings": {
+                "fields": {
+                    "DeliveryDate": {
+                        "selectedValues": "DATE,QUARTER1,QUARTER2,QUARTER3,QUARTER4,MONTH,DATERANGE,YEAR",
+                        "exclude": false
+                    }
+                }
+            }
+        }
+    },
+    "sap.platform.abap": {
+        "uri": ""
+    },
+    "sap.fiori": {
+        "registrationIds": [],
+        "archeType": "transactional"
+    },
+    "sap.platform.hcp": {
+        "uri": ""
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "products_business_solutions"
+    }
 }
