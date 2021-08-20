@@ -10,7 +10,6 @@
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="products_namespace">
-            
             <Annotations Target="cds_zpip_ui_alp_market_ord.ALPMarketOrderType/ProductName">
                 <Annotation Term="Common.ValueList" Qualifier ="FilterProdByOrdQuantity">
                     <Record Type="Common.ValueListType">
@@ -43,7 +42,6 @@
                     </Record>
                 </Annotation>
             </Annotations>
-                        
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
